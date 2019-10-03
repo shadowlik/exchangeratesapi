@@ -19,7 +19,7 @@ interface apiResponse {
     rates: code[];
     base: code;
     date: string;
-}
+};
 
 /**
  * exchangeratesApiRequest
@@ -35,7 +35,7 @@ async function exchangeratesApiRequest(action: string, symbols: code[], base: co
         params: {
             base,
             symbols: urlSymbols,
-        }
+        },
     };
     const { data } = await axios.get(`${url}/${action}`, options);
 
@@ -59,8 +59,9 @@ export default class exchangeratesApi {
      * @memberof exchangeratesApi
      */
     async latest(symbols: code[], base: code): Promise<apiResponse> {
-        return await exchangeratesApiRequest('latest', symbols, base)
+        return await exchangeratesApiRequest('latest', symbols, base);
     };
+
     /**
      * Get historical rates for any day since 1999.
      *
@@ -70,8 +71,9 @@ export default class exchangeratesApi {
      * @memberof exchangeratesApi
      */
     async general (symbols: code[], base: code): Promise<apiResponse> {
-        return await exchangeratesApiRequest('', symbols, base)
+        return await exchangeratesApiRequest('', symbols, base);
     };
+
     /**
      * Get historical rates for a time period.
      *
@@ -81,6 +83,6 @@ export default class exchangeratesApi {
      * @memberof exchangeratesApi
      */
     async history(symbols: code[], base: code): Promise<apiResponse> {
-        return await exchangeratesApiRequest('history', symbols, base)
+        return await exchangeratesApiRequest('history', symbols, base);
     };
-}
+};
