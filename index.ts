@@ -1,5 +1,6 @@
 /**
  * API Wrapper (https://exchangeratesapi.io/)
+ * @author Henrique Marques <henrique@marquesfernandes.com>
  */
 import axios from 'axios';
 
@@ -20,7 +21,15 @@ interface apiResponse {
     date: string;
 }
 
-const exchangeratesApiRequest = async (action: string, symbols: code[], base: code = 'USD'): Promise<apiResponse> => {
+/**
+ * exchangeratesApiRequest
+ *
+ * @param {string} action
+ * @param {code[]} symbols
+ * @param {code} [base='USD']
+ * @returns {Promise<apiResponse>}
+ */
+async function exchangeratesApiRequest(action: string, symbols: code[], base: code = 'USD'): Promise<apiResponse> {
     const urlSymbols = symbols.join(',');
     const options = {
         params: {
