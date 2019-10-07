@@ -10,6 +10,8 @@ Typescript/Javascript module for [exchangeratesapi.io](https://exchangeratesapi.
 > npm i -s @shadowlik/exchangeratesapi
 
 ## Available Currencies
+All the available currencies according to the [IBAN](https://www.iban.com/currency-codes) (ISO 4217).
+
 | Curency | Code | Number |
 | --- | --- | --- |
 |US Dollar|USD|840|
