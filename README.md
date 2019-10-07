@@ -7,4 +7,6 @@ Typescript/Javascript module for [exchangeratesapi.io](https://exchangeratesapi.
 
 ## Install
 
+> npm i -s @shadowlik/exchangeratesapi
+
 ## How to use
