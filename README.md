@@ -11,7 +11,7 @@ Typescript/Javascript module for [exchangeratesapi.io](https://exchangeratesapi.
 
 ## Available Currencies
 | Curency | Code | Number |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 |US Dollar|USD|840|
 |Euro|EUR|978|
 |Brazilian Real|BRL|986|
